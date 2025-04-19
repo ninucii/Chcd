@@ -79,7 +79,6 @@ h3 {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
@@ -215,17 +214,20 @@ h3 {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
     margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    width: fit-content;
 }
-.cells{
+
+.cells {
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 120px);
     gap: 12px;
-    margin-left: 240px;
-    padding: 12px 0;
-    width: auto;
-    justify-content: middle;
-    align-content: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .cell {
@@ -346,9 +348,18 @@ h3 {
 
 /* For smaller screens */
 @media (max-width: 768px) {
-    .board {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .cells {
         grid-template-columns: repeat(3, 100px);
         grid-template-rows: repeat(3, 100px);
+        gap: 10px;
     }
     
     .cell {
@@ -356,8 +367,13 @@ h3 {
         height: 100px;
     }
     
-    h1 {
-        font-size: 2rem;
+    .character-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .character-option {
+        width: 150px;
     }
     
     .scoreboard {
@@ -365,12 +381,21 @@ h3 {
         align-items: center;
         gap: 10px;
     }
+    
+    .players-selection {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
-    .board {
+    .container {
+        padding: 15px;
+    }
+    
+    .cells {
         grid-template-columns: repeat(3, 80px);
         grid-template-rows: repeat(3, 80px);
+        gap: 8px;
     }
     
     .cell {
@@ -387,17 +412,22 @@ h3 {
     }
 
     .character-option {
-        width: 60px;
+        width: 130px;
     }
     
     .character-icon {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
     
     .status {
         font-size: 1.2rem;
-        min-width: auto;
+        min-width: 250px;
+    }
+    
+    .player-avatar {
+        width: 45px;
+        height: 45px;
     }
 }
 
@@ -408,8 +438,17 @@ h3 {
         gap: 6px;
     }
     
+    .cell {
+        width: 65px;
+        height: 65px;
+    }
+    
     .character-options {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .character-option {
+        width: 110px;
     }
     
     .character-icon {
@@ -424,6 +463,11 @@ h3 {
     .button {
         padding: 10px 15px;
         font-size: 0.9rem;
+    }
+    
+    .status {
+        min-width: 220px;
+        font-size: 1rem;
     }
 }
 
