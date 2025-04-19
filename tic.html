@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Tic Tac Toe - My Wife's Girlfriends</title>
+    <link rel="stylesheet" href="Tic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1> Chcds Tic Tac Toe</h1>
+        
+        <!-- Character Selection Section -->
+        <div class="character-selection" id="character-selection">
+            <h2>Choose Your Characters!</h2>
+            <div class="players-selection">
+                <div class="player-select">
+                    <h3>Player 1</h3>
+                    <div class="character-options">
+                        <div class="character-option selected" data-character="Grisha">
+                            <div class="character-icon Grisha"></div>
+                            <p>Grisha</p>
+                        </div>
+                        <div class="character-option" data-character="Shagu">
+                            <div class="character-icon Shagu"></div>
+                            <p>Shagu</p>
+                        </div>
+                        <div class="character-option" data-character="Merabi">
+                            <div class="character-icon Merabi"></div>
+                            <p>Merabi</p>
+                        </div>
+                        <div class="character-option" data-character="Cotne">
+                            <div class="character-icon Cotne"></div>
+                            <p>Cotne</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-select">
+                    <h3>Player 2</h3>
+                    <div class="character-options">
+                        <div class="character-option" data-character="Chika">
+                            <div class="character-icon Chika"></div>
+                            <p>Chika</p>
+                        </div>
+                        <div class="character-option selected" data-character="Nunuka">
+                            <div class="character-icon Nunuka"></div>
+                            <p>Nunuka</p>
+                        </div>
+                        <div class="character-option" data-character="Dochi">
+                            <div class="character-icon Dochi"></div>
+                            <p>Dochi</p>
+                        </div>
+                        <div class="character-option" data-character="Tika">
+                            <div class="character-icon Tika"></div>
+                            <p>Tika</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="button" id="start-game">Start Game!</button>
+        </div>
+        
+        <!-- Game Board Section (initially hidden) -->
+        <div class="game-container" id="game-container" style="display: none;">
+            <div class="game-info">
+                <div class="status" id="status"></div>
+                <div class="current-match">
+                    <div class="player-avatar" id="player1-avatar"></div>
+                    <div class="vs">VS</div>
+                    <div class="player-avatar" id="player2-avatar"></div>
+                </div>
+            </div>
+            <div class="board" id="board">
+                <div class="cells" id="cells">
+                <div class="cell" data-cell-index="0"></div>
+                <div class="cell" data-cell-index="1"></div>
+                <div class="cell" data-cell-index="2"></div>
+                <div class="cell" data-cell-index="3"></div>
+                <div class="cell" data-cell-index="4"></div>
+                <div class="cell" data-cell-index="5"></div>
+                <div class="cell" data-cell-index="6"></div>
+                <div class="cell" data-cell-index="7"></div>
+                <div class="cell" data-cell-index="8"></div>
+            </div>
+            </div>
+            <div class="scoreboard">
+                <div class="score-item">
+                    <span id="player1-name">Player 1</span>: <span id="player1-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span id="player2-name">Player 2</span>: <span id="player2-score">0</span>
+                </div>
+                <div class="score-item">
+                    Draws: <span id="draws">0</span>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button class="button" id="restart">Play Again!</button>
+                <button class="button secondary" id="change-characters">Change Characters</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="tic.js"></script>
+</body>
+</html>
