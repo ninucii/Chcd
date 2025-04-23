@@ -14,46 +14,40 @@ document.addEventListener('DOMContentLoaded', () => {
     let player2Character = 'Nunuka';
     
     // Character information with emojis
-    const characters = {
+   const characters = {
         'Grisha': {
             name: 'Grisha',
-            color: '#ff69b4',
-            emoji: '💸'
+            color: '#FF69B4',
         },
         'Shagu': {
             name: 'Shagu',
-            color: '#000000',
-            emoji: '💣'
+            color: '#FF69B4',
+           
         },
         'Merabi': {
             name: 'Merabi',
-            color: '#4169e1',
-            emoji: '🍲'
+            color: '#FF69B4',   
         },
         'Cotne': {
             name: 'Cotne',
-            color: '#fd0202',
-            emoji: '🤹🏻‍♂️'
+            color: '#FF69B4',
         },
         'Nunuka': {
             name: 'Nunuka',
-            color: '#ffd700',
-            emoji: '🚑'
+            color: '#FF69B4',
         },
         'Dochi':{
             name: 'Dochi',
-            color: '#0dff19',
-            emoji: '🌶'
+            color: '#FF69B4',
         },
         'Chika': {
             name: 'Chika',
-            color: '#d400ff',
-            emoji: '🛁'
+            color: '#FF69B4',
+
         },
         'Tika':{
             name: 'Tika',
-            color: '#0dd7ff',
-            emoji: '🎤'
+            color: '#FF69B4',
         }
     };
     
