@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Status messages with character-specific emojis
     const winMessage = () => {
         const character = currentPlayer === player1Character ? characters[player1Character] : characters[player2Character];
-        return `${character.emoji} ${character.name} wins! ${character.emoji}`;
+        return `${character.name} wins!`;
     };
     
     const drawMessage = () => `✨ Friendship wins! It's a draw! ✨`;
     
     const currentPlayerTurn = () => {
         const character = currentPlayer === player1Character ? characters[player1Character] : characters[player2Character];
-        return `${character.emoji} ${character.name}'s turn ${character.emoji}`;
+        return `${character.name}'s turn`;
     };
     
     // Initialize the character selection events
